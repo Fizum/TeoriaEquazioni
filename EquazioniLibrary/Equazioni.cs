@@ -11,15 +11,18 @@ namespace EquazioniLibrary
         public static bool IsDeterminated(double a)
         {
             if (a == 0)
-            {
                 return false;
-            }
             else
-            {
                 return true;
-
-            }
             
+        }
+
+        public static bool IsInconsisted(double a)
+        {
+            if (a == 0)
+                return true;
+            else
+                return false;
         }
     }
 }
