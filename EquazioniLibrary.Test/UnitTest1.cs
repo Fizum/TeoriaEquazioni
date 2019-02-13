@@ -38,8 +38,9 @@ namespace EquazioniLibrary.Test
         public void TestIndet1()
         {
             double a = 0;
+            double b = 5;
             bool respeq = true;
-            bool resp = Equazioni.IsInconsisted(a);
+            bool resp = Equazioni.IsInconsisted(a, b);
             Assert.AreEqual(respeq, resp);
         }
 
@@ -47,8 +48,9 @@ namespace EquazioniLibrary.Test
         public void TestIndet2()
         {
             double a = -5;
+            double b = 3;
             bool respeq = false;
-            bool resp = Equazioni.IsInconsisted(a);
+            bool resp = Equazioni.IsInconsisted(a, b);
             Assert.AreEqual(respeq, resp);
         }
 
@@ -56,8 +58,18 @@ namespace EquazioniLibrary.Test
         public void TestIndet3()
         {
             double a = 5;
+            double b = 0;
             bool respeq = false;
-            bool resp = Equazioni.IsInconsisted(a);
+            bool resp = Equazioni.IsInconsisted(a, b);
+            Assert.AreEqual(respeq, resp);
+        }
+
+        [TestMethod]
+        public void TestDegree1()
+        {
+            double a = 5;
+            bool respeq = true;
+            bool resp = Equazioni.IsDegree2(a);
             Assert.AreEqual(respeq, resp);
         }
     }
