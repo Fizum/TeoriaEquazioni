@@ -51,5 +51,14 @@ namespace EquazioniLibrary.Test
             bool resp = Equazioni.IsInconsisted(a);
             Assert.AreEqual(respeq, resp);
         }
+
+        [TestMethod]
+        public void TestIndet3()
+        {
+            double a = 5;
+            bool respeq = false;
+            bool resp = Equazioni.IsInconsisted(a);
+            Assert.AreEqual(respeq, resp);
+        }
     }
 }
