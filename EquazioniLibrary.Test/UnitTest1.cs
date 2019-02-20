@@ -72,5 +72,32 @@ namespace EquazioniLibrary.Test
             bool resp = Equazioni.IsDegree2(a);
             Assert.AreEqual(respeq, resp);
         }
+
+        [TestMethod]
+        public void TestDegree2()
+        {
+            double a = 0;
+            bool respeq = false;
+            bool resp = Equazioni.IsDegree2(a);
+            Assert.AreEqual(respeq, resp);
+        }
+
+        [TestMethod]
+        public void TestDegree3()
+        {
+            double a = -9;
+            bool respeq = true;
+            bool resp = Equazioni.IsDegree2(a);
+            Assert.AreEqual(respeq, resp);
+        }
+
+        [TestMethod]
+        public void TestDelta1()
+        {
+            double a = -9;
+            double b = 3;
+            double c = 3;
+        }
+
     }
 }
