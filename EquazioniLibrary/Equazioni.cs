@@ -36,15 +36,22 @@ namespace EquazioniLibrary
 
         public static double Delta(double a, double b, double c)
         {
-            if(!IsDegree2(a))
-            { double d = b * b - 4 * a * c;
-                return d;
-            }
+            double d = (b * b) - (4 * (a * c));
+            return d;
 
-            return double.NaN;
-            
+        }
 
-            
+        public static string EquationDegree1(double a, double b)
+        {
+            string risp = "";
+
+            if (a == 0 && b == 0)
+                risp = "Indeterminated";
+            else if (a != 0 && b == 0)
+                risp = "Impossible";
+
+            return risp;
+
         }
     }
 }

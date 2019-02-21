@@ -7,6 +7,7 @@ namespace EquazioniLibrary.Test
     [TestClass]
     public class UnitTest1
     {
+        //tests di verifica se un'equazione è determinata
         [TestMethod]
         public void TestDet1()
         {
@@ -34,6 +35,7 @@ namespace EquazioniLibrary.Test
             Assert.AreEqual(respeq, resp);
         }
 
+        //tests di verifica se un'equazione è impossibile
         [TestMethod]
         public void TestIndet1()
         {
@@ -64,6 +66,7 @@ namespace EquazioniLibrary.Test
             Assert.AreEqual(respeq, resp);
         }
 
+        //tests di verifica se un'equazione è di 2°
         [TestMethod]
         public void TestDegree1()
         {
@@ -91,13 +94,55 @@ namespace EquazioniLibrary.Test
             Assert.AreEqual(respeq, resp);
         }
 
+        //tests di verifica del delta
         [TestMethod]
         public void TestDelta1()
         {
             double a = -9;
             double b = 3;
             double c = 3;
+
+            double rispeq = 117;
+            double resp = Equazioni.Delta(a, b, c);
+            Assert.AreEqual(rispeq, resp);
         }
 
+        [TestMethod]
+        public void TestDelta2()
+        {
+            double a = 9;
+            double b = 3;
+            double c = 3;
+
+            double rispeq = -99;
+            double resp = Equazioni.Delta(a, b, c);
+            Assert.AreEqual(rispeq, resp);
+        }
+
+        [TestMethod]
+        public void TestDelta3()
+        {
+            double a = 0;
+            double b = 3;
+            double c = 3;
+
+            double rispeq = 9;
+            double resp = Equazioni.Delta(a, b, c);
+            Assert.AreEqual(rispeq, resp);
+        }
+
+        [TestMethod]
+        public void TestDelta4()
+        {
+            double a = 0;
+            double b = 0;
+            double c = 3;
+
+            double rispeq = 0;
+            double resp = Equazioni.Delta(a, b, c);
+            Assert.AreEqual(rispeq, resp);
+        }
+
+        //tests di risoluzione dell'equazione
     }
 }
