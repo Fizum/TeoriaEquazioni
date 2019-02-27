@@ -49,7 +49,12 @@ namespace EquazioniLibrary
                 risp = "Indeterminated";
             else if (a != 0 && b == 0)
                 risp = "Impossible";
-
+            else
+            {
+                a = b / a;
+                risp = Convert.ToString(a);
+            }
+                
             return risp;
 
         }

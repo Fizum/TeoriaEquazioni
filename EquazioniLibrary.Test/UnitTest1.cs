@@ -144,5 +144,48 @@ namespace EquazioniLibrary.Test
         }
 
         //tests di risoluzione dell'equazione
+        [TestMethod]
+        public void TestEquation1()
+        {
+            double a = 0;
+            double b = 0;
+
+            string rispeq = "Indeterminated";
+            string resp = Equazioni.EquationDegree1(a, b);
+            Assert.AreEqual(rispeq, resp);
+        }
+
+        [TestMethod]
+        public void TestEquation2()
+        {
+            double a = 5;
+            double b = 0;
+
+            string rispeq = "Impossible";
+            string resp = Equazioni.EquationDegree1(a, b);
+            Assert.AreEqual(rispeq, resp);
+        }
+
+        [TestMethod]
+        public void TestEquation3()
+        {
+            double a = 3;
+            double b = 6;
+
+            string rispeq = "2";
+            string resp = Equazioni.EquationDegree1(a, b);
+            Assert.AreEqual(rispeq, resp);
+        }
+
+        [TestMethod]
+        public void TestEquation4()
+        {
+            double a = 22;
+            double b = 11;
+
+            string rispeq = "0,5";
+            string resp = Equazioni.EquationDegree1(a, b);
+            Assert.AreEqual(rispeq, resp);
+        }
     }
 }
